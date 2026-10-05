@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #070707;
+    color: #cecece;
+    font-family: 'JetBrains Mono', 'Space Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.02em;
+    overflow-x: hidden;
+  }
+}
+
+/* Previne quebras do bloco ASCII */
+pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Scrollbar técnica e minimalista */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: #202020;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+/* Efeito sutil de Scanlines CRT */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
